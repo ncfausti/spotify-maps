@@ -1,18 +1,23 @@
 import React from 'react';
-
+import VideoItem from './VideoItem';
 
 // Video components placeholder
 // All videos stored in State
 // Fetch from API
 class Videos extends React.Component {
   render() {
+    let videoItems;
+    if(this.props.videos){
+      videoItems = this.props.videos.map(video => {
+        console.log(video);
+        return(<VideoItem key={video.title} video={video} />
+        );
+      });
+    }
+
     return (
       <div id="videos-main">
-        {this.props.test}
-        <div>Some videos here</div>
-        <div>Some videos here</div>
-        <div>Some videos here</div>
-        <div>Some videos here</div>
+        {videoItems}
       </div>
     );
   }

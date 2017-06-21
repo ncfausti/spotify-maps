@@ -4,22 +4,34 @@ import './App.css';
 
 // App componenets placeholder
 class App extends React.Component {
-  componenDidMount() {
-    
+  componentDidMount() {
+    this.setState({videos: [
+      {
+        title: 'ham and milk',
+        runtime: 127 // minutes
+      },
+      {
+        title: 'ham and cheese',
+        runtime: 499 // minutes
+      },
+      {
+        title: 'pollo y leche',
+        runtime: 30 // minutes
+      },
+    ]});
   }
+
   constructor() {
+    super();
     this.state = {
-      videos: [
-        {
-          title: ''
-        }
-      ]
+      videos: []
     }
   }
+
   render() {
     return (
-      <div>
-       <Videos test="sometest" />
+      <div className="App">
+       <Videos videos={this.state.videos} />
       </div>
     );
   }
