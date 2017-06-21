@@ -2,21 +2,54 @@ import React from 'react';
 import Videos from './Components/Videos';
 import './App.css';
 
+// MockBackend.listVideos = function() {
+//   return [
+//   {
+  //  id: 1,
+  //  title: "My video #1",
+  //  publishedDate: "2015-08-13 00:00:00",
+  //  description: "The description #2",
+  //  coverImage: "http://link/to/image1",
+  //  sortOrder: 0
+// }, {
+  //  id: 2,
+  //  title: "My video #2",
+  //  publishedDate: "2015-07-13 00:00:00",
+  //  description: "The description #2",
+  //  coverImage: "http://link/to/image2",
+  //  sortOrder: 1
+// }
+//   // etc. would be good to have at least a 5-6 videos to play around with
+//  ];
+// }
+
 // App componenets placeholder
 class App extends React.Component {
   componentDidMount() {
     this.setState({videos: [
       {
-        title: 'ham and milk',
-        runtime: 127 // minutes
+        id: 1,
+        title: "My video #1",
+        publishedDate: "2015-08-13 00:00:00",
+        description: "The description #2",
+        coverImage: "http://link/to/image1",
+        sortOrder: 0,
       },
       {
-        title: 'ham and cheese',
-        runtime: 499 // minutes
+        id: 2,
+        title: "My video #2",
+        publishedDate: "2015-07-13 00:00:00",
+        description: "The description #2",
+        coverImage: "http://link/to/image2",
+        sortOrder: 1
       },
       {
-        title: 'pollo y leche',
-        runtime: 30 // minutes
+        id: 3,
+        title: "My video #3",
+        publishedDate: "2015-06-13 00:00:00",
+        description: "The description #3",
+        coverImage: "http://link/to/image3",
+        sortOrder: 2
       },
     ]});
   }
