@@ -5,7 +5,8 @@ class VideoItem extends React.Component {
   render() {
     return (
       <li className="Video">
-      {this.props.video.title} - {this.props.video.description}
+      <h3>{this.props.video.title}</h3>
+      {this.props.video.description}
       </li>
     );
   }

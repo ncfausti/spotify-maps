@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoItem from './VideoItem';
+import AddVideo from './AddVideo';
 
 // Video components placeholder
 // All videos stored in State
@@ -18,6 +19,7 @@ class Videos extends React.Component {
     return (
       <div id="videos-main">
         {videoItems}
+        <AddVideo />
       </div>
     );
   }
